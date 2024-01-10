@@ -1,5 +1,10 @@
+
+
+
+/* GENERAL STYLES */
+
+
 * {
-    /* border: 1px solid red; */
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -27,6 +32,26 @@ h1, h2, h3, h4 {
 h1, h2 {
     color: var(--darkcolor);
 }
+
+main, footer {
+    background-color: #eaeaf4;
+}
+
+h3 {
+    opacity: 0.9;
+    padding: 0px 16px;
+    text-align: end;
+    width: 280px;
+    border-right: 4px solid var(--blue);
+    color: var(--blue);
+    font-size: 46px;
+}
+
+
+
+
+/* HEADER STYLES */
+
 
 header {
     padding: 8px 0px 16px 0px;
@@ -93,19 +118,12 @@ h2 {
     opacity: 0.8;
 }
 
-main, footer {
-    background-color: #eaeaf4;
-}
 
-h3 {
-    opacity: 0.9;
-    padding: 0px 16px;
-    text-align: end;
-    width: 280px;
-    border-right: 4px solid var(--blue);
-    color: var(--blue);
-    font-size: 46px;
-}
+
+
+
+/* MAIN STYLES */
+
 
 main {
     display: flex;
@@ -133,6 +151,9 @@ section {
     flex-wrap: wrap;
 }
 
+a {
+    text-decoration: none;
+}
 
 #Big {
     background-image: url(https://github.com/Chaosgale/portfolio/blob/main/assets/images/CSS.png?raw=true);
@@ -141,6 +162,7 @@ section {
     border: 4px solid var(--turquoise);
     width: 836px;
     height: 372px;
+    
 }
 
 #Big div {
@@ -149,8 +171,14 @@ section {
     background-color: var(--turquoise);
     position: relative;
     top: 279px;
-
 }
+
+#Big:hover {
+    box-shadow: inset 0px 0px 20px #14f3f3;
+    color: #14f3f3;
+    transition: all 0.5s ease-in-out;
+}
+
 
 .Small {
     margin-bottom: 13px;
@@ -167,23 +195,34 @@ section {
     top: 47px;
 }
 
+.Small:hover {
+    box-shadow: inset 0px 0px 20px #14f3f3;
+    color: #14f3f3;
+    transition: all 0.5s ease-in-out;
+}
+
+
 #LED {
-    background-image: url();
+    background-image: url(https://github.com/Chaosgale/portfolio/blob/main/assets/images/LED.png?raw=true);
+    background-position: 4% 4%;
 }
 
 #Calculator {
+    background-image: url(https://github.com/Chaosgale/portfolio/blob/main/assets/images/Calculator.jpeg?raw=true);
+    background-size: 100%;
     position: absolute;
     top: 921px; left: 745px;
 
 }
 
 #Puzzle {
-
+    background-image: url(https://github.com/Chaosgale/portfolio/blob/main/assets/images/puzzle.jpeg?raw=true);
+    background-size: 100%;
 }
 
-
-
 #Run {
+    background-image: url(https://github.com/Chaosgale/portfolio/blob/main/assets/images/RUN.png?raw=true);
+    background-size: 150%;
     position: absolute;
     top: 1074px; left: 745px;
 }
@@ -201,6 +240,13 @@ div p {
     font-size: 13px;
     color: #6d7071;
 }
+
+
+
+
+
+/* FOOTER STYLES */
+
 
 footer {
     margin-bottom: 40px;
@@ -223,5 +269,151 @@ footer li {
     letter-spacing: 0.5px;
     border-bottom: 4px solid;
     color: var(--blue);
+}
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+
+@media screen and (min-width: 1536px) {
+    header h1 {
+        margin-left: 100px;
+    }
+
+    header nav {
+        margin-right: 150px;
+    }
+
+    #Calculator, #Run {
+        margin-left: 100px;
+    }
+
+    main, footer {
+        margin-left: 100px;
+    }
+}
+
+
+@media screen and (min-width: 1736px) {
+    header h1 {
+        margin-left: 200px;
+    }
+
+    header nav {
+        margin-right: 250px;
+    }
+
+    #Calculator, #Run {
+        margin-left: 200px;
+    }
+
+    main, footer {
+        margin-left: 200px;
+    }
+}
+
+
+@media screen and (max-width: 1210px) {
+    #Big {
+        width: 411px;
+    }
+
+    #Run {
+        position: initial;
+    }
+
+    #Calculator {
+        position: initial;
+    }
+
+    header  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav {
+        margin-left: 50px;
+        margin-right: 0px;
+    }
+
+    #About p {
+        width: 411px;
+    }
+
+    h2 {
+        position: relative;
+        top: 50%; left: 50%;
+    }
+
+    footer ul {
+        width: 489px;
+        margin-bottom: 50px;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    #Big {
+        width: 411px;
+    }
+
+    #Run {
+        position: initial;
+    }
+
+    #Calculator {
+        position: initial;
+    }
+
+    #About p {
+        padding: 0px 60px 0px 88px;
+        width: auto;
+        display: inline-block;
+    }
+
+    h3 {
+        margin-bottom: 40px;
+        display: flex;
+        width: auto;
+        border: initial;
+    }
+
+    main, section, footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer ul {
+        margin-left: 10px;
+    }
+
+    header  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav {
+        margin-left: 50px;
+        margin-right: 0px;
+    }
+
+    h2 {
+        position: relative;
+        top: 50%; left: 40%;
+    }
+
+
+
+
 }
 
